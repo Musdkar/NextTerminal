@@ -21,7 +21,7 @@ export default function Blog() {
         </section>
       ) : (
         <section className="text-center py-16">
-          <p className="text-dark-textSecondary">No posts yet. Check back soon!</p>
+          <p className="text-text-secondary">No posts yet. Check back soon!</p>
         </section>
       )}
     </div>

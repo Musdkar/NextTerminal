@@ -7,26 +7,26 @@ export default function NotFound() {
         <div className="mb-8">
           <h1 className="text-8xl font-bold mb-4 text-accent">404</h1>
           <h2 className="text-3xl font-semibold mb-6">Page Not Found</h2>
-          <p className="text-xl text-dark-textSecondary mb-8">
+          <p className="text-xl text-text-secondary mb-8">
             Oops! The page you're looking for doesn't exist. Maybe it got lost in the void.
           </p>
         </div>
         
         {/* Terminal Style Message */}
-        <div className="bg-dark-surface border border-dark-border rounded-lg p-6 font-mono text-sm mb-8 max-w-lg mx-auto">
+        <div className="bg-surface border border-border rounded-lg p-6 font-mono text-sm mb-8 max-w-lg mx-auto">
           <div className="flex items-center space-x-2 mb-4">
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
             <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-            <span className="text-dark-textSecondary ml-2">terminal</span>
+            <span className="text-text-secondary ml-2">terminal</span>
           </div>
           <div className="space-y-2 text-left">
             <div>
-              <span className="text-accent">dev@blog</span>:<span className="text-green-500">~</span>$ <span className="text-dark-textSecondary">curl https://blog.example.com/404</span>
+              <span className="text-accent">dev@blog</span>:<span className="text-green-500">~</span>$ <span className="text-text-secondary">curl https://blog.example.com/404</span>
             </div>
             <div className="text-red-500">Error: 404 Not Found</div>
             <div>
-              <span className="text-accent">dev@blog</span>:<span className="text-green-500">~</span>$ <span className="text-dark-textSecondary">echo "Let's go back home"</span>
+              <span className="text-accent">dev@blog</span>:<span className="text-green-500">~</span>$ <span className="text-text-secondary">echo "Let's go back home"</span>
             </div>
             <div className="text-green-500">Let's go back home</div>
           </div>

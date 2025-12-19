@@ -25,7 +25,7 @@ export default function Home() {
             </Link>
             <Link
               href="/about"
-              className="px-6 py-3 bg-dark-surface border border-dark-border rounded-md hover:bg-dark-surface/80 transition-colors font-medium"
+              className="px-6 py-3 bg-surface border border-border rounded-md hover:bg-surface/80 transition-colors font-medium"
             >
               About Me
             </Link>
@@ -41,7 +41,7 @@ export default function Home() {
             href="/blog"
             className="text-sm text-accent hover:text-accent/80 transition-colors font-medium"
           >
-            View all →
+            View all ->
           </Link>
         </div>
         <div className="space-y-10">

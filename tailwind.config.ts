@@ -26,7 +26,7 @@ module.exports = {
           textSecondary: '#656d76',
           border: '#d0d7de',
         },
-        accent: '#58a6ff',
+        accent: 'var(--accent-color)',
         // Direct color mappings to CSS variables
         bg: 'var(--bg-color)',
         surface: 'var(--surface-color)',

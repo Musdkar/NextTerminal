@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   return (
@@ -34,6 +35,8 @@ const Header = () => {
               </Link>
             </nav>
           </div>
+
+          <ThemeToggle />
         </div>
       </div>
     </header>

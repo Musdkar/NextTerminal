@@ -27,10 +27,10 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
       .replace(/^\d+\.\s+([^\n]+)/gm, '<ol class="list-decimal pl-6 mb-4"><li class="mb-2">$1</li></ol>')
       
       // Code blocks
-      .replace(/```(\w+)?\n([\s\S]*?)```/gm, '<pre class="bg-dark-surface border border-dark-border rounded-lg p-4 mb-6 overflow-x-auto"><code class="font-mono text-sm">$2</code></pre>')
+      .replace(/```(\w+)?\n([\s\S]*?)```/gm, '<pre class="bg-surface border border-border rounded-lg p-4 mb-6 overflow-x-auto"><code class="font-mono text-sm">$2</code></pre>')
       
       // Inline code
-      .replace(/`([^`]+)`/gm, '<code class="bg-dark-surface/50 border border-dark-border/50 rounded px-1.5 py-0.5 font-mono text-sm">$1</code>')
+      .replace(/`([^`]+)`/gm, '<code class="bg-surface/70 border border-border/60 rounded px-1.5 py-0.5 font-mono text-sm">$1</code>')
       
       // Links
       .replace(/\[([^\]]+)\]\(([^)]+)\)/gm, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent/80 transition-colors underline">$1</a>')
@@ -42,10 +42,10 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
       .replace(/\*([^*]+)\*/gm, '<em class="italic">$1</em>')
       
       // Horizontal rules
-      .replace(/^---$/gm, '<hr class="border-dark-border/50 my-12">')
+      .replace(/^---$/gm, '<hr class="border-border/50 my-12">')
       
       // Blockquotes
-      .replace(/^>\s+([^\n]+)/gm, '<blockquote class="border-l-4 border-dark-border pl-4 italic text-dark-textSecondary mb-4">$1</blockquote>');
+      .replace(/^>\s+([^\n]+)/gm, '<blockquote class="border-l-4 border-border pl-4 italic text-text-secondary mb-4">$1</blockquote>');
     
     // Clean up nested lists
     html = html.replace(/<\/ul><\/p>\s*<ul/g, '<ul');
@@ -56,7 +56,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
 
   return (
     <div 
-      className="prose prose-invert max-w-none prose-headings:text-dark-text prose-p:text-dark-text prose-a:text-accent prose-code:text-dark-text prose-blockquote:text-dark-textSecondary"
+      className="prose max-w-none prose-headings:text-text prose-p:text-text prose-a:text-accent prose-code:text-text prose-blockquote:text-text-secondary"
       dangerouslySetInnerHTML={{ __html: renderMarkdown(content) }}
     />
   );

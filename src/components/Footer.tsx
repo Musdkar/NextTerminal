@@ -4,11 +4,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-dark-border/50 py-8 mt-16">
+    <footer className="border-t border-border/50 py-8 mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-center md:text-left">
-            <p className="text-dark-textSecondary text-sm">
+            <p className="text-text-secondary text-sm">
               © {currentYear} devBlog. All rights reserved.
             </p>
           </div>
@@ -18,7 +18,7 @@ const Footer = () => {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dark-textSecondary hover:text-dark-text transition-colors text-sm flex items-center space-x-1"
+              className="text-text-secondary hover:text-text transition-colors text-sm flex items-center space-x-1"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
