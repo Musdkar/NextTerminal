@@ -1,34 +1,37 @@
 import Link from 'next/link';
 import PostCard from '@/components/PostCard';
-import { getLatestPosts } from '@/lib/mockPosts';
+import { getAllPosts } from '@/lib/mdx';
 
-export default function Home() {
-  const latestPosts = getLatestPosts(3);
+export default async function Home() {
+  const posts = await getAllPosts();
+  const latestPosts = posts.slice(0, 3);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero Section */}
       <section className="mb-16 fade-in">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Hello, I'm a <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-blue-400">Developer</span>
-          </h1>
-          <p className="text-xl text-text-secondary mb-8 max-w-2xl">
-            Building digital experiences with code. Sharing insights on modern web development, TypeScript, and software architecture.
-          </p>
-          <div className="flex space-x-4">
-            <Link
-              href="/blog"
-              className="px-6 py-3 bg-accent text-white rounded-md hover:bg-accent/80 transition-colors font-medium"
-            >
-              Read Blog
-            </Link>
-            <Link
-              href="/about"
-              className="px-6 py-3 bg-surface border border-border rounded-md hover:bg-surface/80 transition-colors font-medium"
-            >
-              About Me
-            </Link>
+        <div className="clear-panel rounded-xl p-8 md:p-12 mb-8">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
+              Hello, I'm a <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-blue-400">Developer</span>
+            </h1>
+            <p className="text-xl text-text-secondary mb-8 max-w-2xl">
+              Building digital experiences with code. Sharing insights on modern web development, TypeScript, and software architecture.
+            </p>
+            <div className="flex space-x-4">
+              <Link
+                href="/blog"
+                className="px-6 py-3 bg-accent text-white rounded-md hover:bg-accent/80 transition-colors font-medium"
+              >
+                Read Blog
+              </Link>
+              <Link
+                href="/about"
+                className="px-6 py-3 bg-surface border border-border rounded-md hover:bg-surface/80 transition-colors font-medium"
+              >
+                About Me
+              </Link>
+            </div>
           </div>
         </div>
       </section>

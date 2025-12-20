@@ -4,24 +4,22 @@
 
 :root {
   color-scheme: light;
-  --bg-color: #ffffff;
-  --surface-color: #f6f8fa;
-  --text-color: #24292f;
-  --text-secondary-color: #656d76;
-  --border-color: #d0d7de;
-  --accent-color: #2563eb;
-  --overlay-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(245, 248, 250, 0.85) 100%);
+  --bg-color: #0b0d13;
+  --surface-color: #121520;
+  --text-color: #e2e8f0;
+  --text-secondary-color: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.12);
+  --accent-color: #58a6ff;
 }
 
 [data-theme='dark'] {
   color-scheme: dark;
-  --bg-color: #0d1117;
-  --surface-color: #161b22;
-  --text-color: #c9d1d9;
-  --text-secondary-color: #8b949e;
-  --border-color: #30363d;
+  --bg-color: #0b0d13;
+  --surface-color: #121520;
+  --text-color: #e2e8f0;
+  --text-secondary-color: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.12);
   --accent-color: #58a6ff;
-  --overlay-gradient: linear-gradient(135deg, rgba(13, 17, 23, 0.75) 0%, rgba(22, 27, 34, 0.75) 100%);
 }
 
 body {
@@ -32,21 +30,9 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: var(--bg-color);
-  color: var(--text-color);
+  color: #e2e8f0;
   line-height: 1.6;
   transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-/* 提升内容可读性的半透明遮罩层 */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--overlay-gradient);
-  z-index: -1;
 }
 
 main {
@@ -56,6 +42,12 @@ main {
 
 code {
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+@layer components {
+  .clear-panel {
+    @apply bg-[#0a0a0f]/90 border border-white/10 shadow-2xl backdrop-blur-none;
+  }
 }
 
 /* Custom scrollbar */

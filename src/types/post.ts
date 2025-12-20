@@ -5,6 +5,7 @@ export interface Post {
   summary: string;
   content: string;
   date: string;
+  tags: string[];
   readTime: number;
   wordCount: number;
 }

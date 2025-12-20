@@ -1,8 +1,8 @@
 import PostCard from '@/components/PostCard';
-import { getPosts } from '@/lib/mockPosts';
+import { getAllPosts } from '@/lib/mdx';
 
-export default function Blog() {
-  const posts = getPosts();
+export default async function Blog() {
+  const posts = await getAllPosts();
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

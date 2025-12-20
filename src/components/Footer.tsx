@@ -9,13 +9,16 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-center md:text-left">
             <p className="text-text-secondary text-sm">
-              © {currentYear} devBlog. All rights reserved.
+              © {currentYear}{' '}
+              <span className="text-slate-300 font-medium">ByteJournal</span>
+              . Powered by{' '}
+              <span className="text-slate-300 font-medium">Next.js</span>.
             </p>
           </div>
           
           <div className="flex space-x-6">
             <Link
-              href="https://github.com"
+              href="https://github.com/Musdkar/ByteJournal"
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary hover:text-text transition-colors text-sm flex items-center space-x-1"

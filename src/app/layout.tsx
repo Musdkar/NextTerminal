@@ -3,6 +3,9 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { LightboxProvider } from '@/components/Lightbox';
+import ReadingProgress from '@/components/ReadingProgress';
+import { getAllPosts } from '@/lib/mdx';
 
 export const metadata: Metadata = {
   title: 'devBlog - Developer Insights & Tutorials',
@@ -27,13 +30,15 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://example.com'),
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const posts = await getAllPosts();
+
   return (
-    <html lang="zh-CN" suppressHydrationWarning>
+    <html lang="zh-CN" suppressHydrationWarning className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -41,11 +46,14 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <ThemeProvider>
-          <Header />
-          <main className="min-h-screen">
-            {children}
-          </main>
-          <Footer />
+          <LightboxProvider>
+            <ReadingProgress />
+            <Header posts={posts} />
+            <main className="min-h-screen pt-24 pb-20 px-4 sm:px-6">
+              {children}
+            </main>
+            <Footer />
+          </LightboxProvider>
         </ThemeProvider>
       </body>
     </html>
