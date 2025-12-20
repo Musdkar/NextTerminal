@@ -13,6 +13,26 @@
 
 > 重要：本项目没有浅色/深色主题切换功能，当前为固定深色风格。
 
+## Preview
+
+<div align="center">
+  <img src="./preview/preview-home.png" alt="ByteJournal Home" width="900" />
+  <br />
+  <br />
+  <img src="./preview/preview-post.png" alt="ByteJournal Post" width="900" />
+</div>
+
+<br />
+
+<details>
+  <summary>More screenshots</summary>
+  <br />
+  <div align="center">
+    <img src="./preview/preview-about.png" alt="ByteJournal About" width="900" />
+  </div>
+</details>
+
+
 ## ✨ 功能特性
 
 - **MDX 文章系统**：读取 `content/posts/*.mdx`，使用 `gray-matter` 解析 frontmatter，文件名即 `slug`
